@@ -1,17 +1,50 @@
 # Lynis Changelog
 
-## Lynis 3.0.1 (not released yet)
+## Lynis 3.0.2 (not released yet)
 
 ### Added
+- AUTH-9284 - Scan for locked user accounts in /etc/passwd
+- TOOL-5130 - Check for active Suricata daemon
+- Detection of Flatcar, Mageia, ROSA Linux, SLES (extended), Void Linux, Zorin OS
+- Alpine, macOS and Mageia EOL dates
+
+### Changed
+- ACCT-9626 - Detect sysstat systemd unit
+- KRNL-5830 - Improved reboot test by ignoring known bad values
+- KRNL-5830 - Ignore rescue kernel such as on CentOS systems
+- KRNL-5830 - Detection of Alpine Linux kernel
+- PKGS-7410 - Don't show exception if no kernels were found on the disk
+- TIME-3185 - Supports now checking files at multiple locations (systemd)
+- ParseNginx function: Support include on absolute paths
+- ParseNginx function: Ignore empty included wildcards
+- Set 'RHEL' as OS_NAME for Red Hat Enterprise Linux
+- French translation file improved and translations extended
+- Test if pgrep exists before using it
+- Better support for busybox shell
+- Small code enhancements
+
+---------------------------------------------------------------------------------
+
+## Lynis 3.0.1 (2020-10-05)
+
+### Added
+- Detection of Alpine Linux
+- Detection of CloudLinux
 - Detection of Kali Linux
 - Detection of Linux Mint
 - Detection of macOS Big Sur (11.0)
 - Detection of Pop!_OS
-- Detection of PHP 7.4 
+- Detection of PHP 7.4
+- Malware detection tool: Microsoft Defender ATP
+- New flag: --slow-warning to allow tests more time before showing a warning
+- Test TIME-3185 to check systemd-timesyncd synchronized time
+- rsh host file permissions
 
 ### Changed
 - AUTH-9229 - Added option for LOCKED accounts and bugfix for older bash versions
 - BOOT-5122 - Presence check for grub.d added
+- CRYP-7902 - Added support for certificates in DER format
+- CRYP-7931 - Added data to report
 - CRYP-7931 - Redirect errors (e.g. when swap is not encrypted)
 - FILE-6430 - Don't grep nonexistant modprobe.d files
 - FIRE-4535 - Set initial firewall state
@@ -19,12 +52,14 @@
 - KRNL-5728 - Handle zipped kernel configuration correctly
 - KRNL-5830 - Improved version detection for non-symlinked kernel
 - MALW-3280 - Extended detection of BitDefender
+- TIME-3104 - Find more time synchronization commands
+- TIME-3182 - Corrected detection of time peers
 - Fix: hostid generation routine would sometimes show too short IDs
-- Generic improvements for macOS
 - Fix: language detection
+- Generic improvements for macOS
 - German translation updated
 - End-of-life database updated
-- Small code enhancements
+- Several minor code enhancements
 
 ---------------------------------------------------------------------------------
 
